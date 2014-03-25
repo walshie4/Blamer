@@ -12,7 +12,7 @@ for file in os.listdir("/var/mobile/Library/Logs/CrashReporter"):
         recording = False #true when writing to output file, false otherwise
         for line in output:
             if recording:
-                os.system("echo " + line + " >> blame.txt") #write to output file
+                open("blame.txt","a").write(line)
             if line.rstrip() == "<key>blame</key>": #starting of what we're looking for
                 recording = True
             if line.rstrip() == "<key>symbolicated</key>":
