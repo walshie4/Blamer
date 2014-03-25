@@ -4,13 +4,17 @@
 
 #A simple script to help jailbroken iDevice users find out what
 #Symbolicate finds as the blame for recent springboard crashes
-import os
+import os, time
 os.system("touch blame.txt")
 for file in os.listdir("/var/mobile/Library/Logs/CrashReporter"):
     if file.endswith(".plist"):
-        output = os.popen("symbolicate " + file).read()
+        #time.sleep(5)
+        print("now reading: " + file)
+        os.system("symbolicate " + file + " > temp.txt")
         recording = False #true when writing to output file, false otherwise
+        output = open("temp.txt")
         for line in output:
+            print(line)
             line = "".join(line.rstrip.split)
             if recording:
                 open("blame.txt","a").write(line)
@@ -20,3 +24,4 @@ for file in os.listdir("/var/mobile/Library/Logs/CrashReporter"):
             if line == "<key>symbolicated</key>":
                 print("stopping")
                 recording = False
+os.system("rm temp.txt")
