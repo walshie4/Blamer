@@ -8,8 +8,7 @@ import os
 os.system("/var/mobile/Library/Logs/CrashReporter/blame.txt")
 for file in os.listdir("/var/mobile/Library/Logs/CrashReporter"):
     if file.endswith(".plist"):
-        command = subprocess.Popen("symbolicate " + file, stdout=subprocess.PIPE)
-        output = command.stdout.read()
+        command = os.popen("symbolicate " + file).read()
         contents = open(ouput)
         recording = False #true when writing to output file, false otherwise
         for line in contents:
