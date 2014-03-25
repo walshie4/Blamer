@@ -13,7 +13,7 @@ for file in os.listdir("/var/mobile/Library/Logs/CrashReporter"):
         for line in output:
             if recording:
                 os.system("echo " + line + " >> blame.txt") #write to output file
-            if line == "<key>blame</key>": #starting of what we're looking for
+            if line.rstrip() == "<key>blame</key>": #starting of what we're looking for
                 recording = True
-            if line == "<key>symbolicated</key>":
+            if line.rstrip() == "<key>symbolicated</key>":
                 recording = False
