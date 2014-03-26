@@ -7,7 +7,7 @@
 import os, time
 os.system("touch blame.txt")
 path = "/var/mobile/Library/Logs/CrashReporter/"
-for file in os.listdir():
+for file in os.listdir(path):
     if file.endswith(".plist"):
         #time.sleep(5)
         print("now reading: " + file)
