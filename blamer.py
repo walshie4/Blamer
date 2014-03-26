@@ -32,6 +32,6 @@ for file in os.listdir(path):
             if line == "<key>symbolicated</key>":
                 print("stopping")
                 recording = False
-for element in crashes:
+for element in sorted(crashes, key=crashes.get, reverse=True):
     open("blame.txt","a").write(element + " - " + str(crashes[element]) + "\n")
 os.system("rm temp.txt")
