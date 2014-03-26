@@ -7,6 +7,7 @@
 import os, time
 os.system("touch blame.txt")
 path = "/var/mobile/Library/Logs/CrashReporter/"
+crashes = dict() #dictionary to hold all found crashes
 for file in os.listdir(path):
     if file.endswith(".plist"):
         print("now reading: " + file)
@@ -21,11 +22,16 @@ for file in os.listdir(path):
                     if word.startswith("<array><string>"):
                         word = word[15:] #cut off XML tags at beginning
                         word = word.split('<')[0] #grab only the path
-                        open("blame.txt","a").write(word + "\n")
+                        if word in crashes: #already been found
+                            crashes[word] += 1 #increment its count
+                        else:
+                            crashes[word] = 1 #add to dict
             if line == "<key>blame</key>": #starting of what we're looking for
                 print("recording")
                 recording = True
             if line == "<key>symbolicated</key>":
                 print("stopping")
                 recording = False
+for element in crashes:
+    open("blame.txt","a").write(element + " - " + str(crashes[element]) + "\n")
 os.system("rm temp.txt")
