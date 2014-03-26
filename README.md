@@ -20,6 +20,8 @@ any directory
 * To use this script simply run `python blamer.py`. A blame.txt file will be generated with
 the summary of symbolicate's blame of all found .plist files in your `/var/mobile/Library/Logs/CrashReporter` dir.
 
+For a video walkthough go [here](http://youtu.be/IoeE5im7Lfo).
+
 ##Note
 * Everytime you sync your iDevice all the crash logs will be deleted
 
