@@ -14,8 +14,11 @@ Automagically find out what Symbolicate blames for the recent crashes on your ja
     `apt-get install python` and answer y to any prompts about installing new packages.
 
 ##How to use
-* To use this script simply run `python blamer.py` on your jailbroken iDevice. A blame.txt file will be generated with
-the summary of symbolicate's blame of all found .plist files in your /var/mobile/Library/Logs/CrashReporter dir.
+* First download the source of this project from one of the links on the project page to your iDevice, then extract the source to
+any directory
+
+* To use this script simply run `python blamer.py`. A blame.txt file will be generated with
+the summary of symbolicate's blame of all found .plist files in your `/var/mobile/Library/Logs/CrashReporter` dir.
 
 ##Note
 * Everytime you sync your iDevice all the crash logs will be deleted
