@@ -6,7 +6,6 @@
 #Symbolicate finds as the blame for recent springboard crashes
 import os, time
 os.system("touch blame.txt")
-os.system("touch prelim.txt")
 path = "/var/mobile/Library/Logs/CrashReporter/"
 for file in os.listdir(path):
     if file.endswith(".plist"):
@@ -18,17 +17,15 @@ for file in os.listdir(path):
         for line in output:
             line = "".join(line.rstrip().split())
             if recording:
-                open("prelim.txt","a").write(line + "\n")
+                for word in line.split(' '):
+                    if word.startswith("<array><string>"):
+                        word = word[15:] #cut off XML tags at beginning
+                        word = word.split('<')[0] #grab only the path
+                        open("blame.txt","a").write(word + "\n")
             if line == "<key>blame</key>": #starting of what we're looking for
                 print("recording")
                 recording = True
             if line == "<key>symbolicated</key>":
                 print("stopping")
                 recording = False
-contents = open("prelim.txt")
-for line in contents:
-    for word in line.split(' '):
-        if word.startswith("<array><string>"):
-            open("blame.txt","a").write(word[15:])
 os.system("rm temp.txt")
-os.system("rm prelim.txt")
