@@ -17,7 +17,7 @@ for file in os.listdir(path):
         for line in output:
             line = "".join(line.rstrip().split())
             if recording:
-                open("blame.txt","a").write(line)
+                open("blame.txt","a").write(line + "\n")
             if line == "<key>blame</key>": #starting of what we're looking for
                 print("recording")
                 recording = True
