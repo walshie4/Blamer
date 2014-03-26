@@ -6,11 +6,13 @@
 #Symbolicate finds as the blame for recent springboard crashes
 import os, time
 os.system("touch blame.txt")
-for file in os.listdir("/var/mobile/Library/Logs/CrashReporter"):
+path = "/var/mobile/Library/Logs/CrashReporter/"
+for file in os.listdir():
     if file.endswith(".plist"):
         #time.sleep(5)
         print("now reading: " + file)
-        os.system("symbolicate " + file + " > temp.txt")
+        command = "symbolicate " + path + file + " > temp.txt"
+        os.system(command)
         recording = False #true when writing to output file, false otherwise
         output = open("temp.txt")
         for line in output:
