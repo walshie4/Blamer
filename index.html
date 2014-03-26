@@ -1,0 +1,87 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Blamer by walshie4</title>
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="javascripts/respond.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <!--[if lt IE 8]>
+    <link rel="stylesheet" href="stylesheets/ie.css">
+    <![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+  </head>
+  <body>
+      <div id="header">
+        <nav>
+          <li class="fork"><a href="https://github.com/walshie4/Blamer">View On GitHub</a></li>
+          <li class="downloads"><a href="https://github.com/walshie4/Blamer/zipball/master">ZIP</a></li>
+          <li class="downloads"><a href="https://github.com/walshie4/Blamer/tarball/master">TAR</a></li>
+          <li class="title">DOWNLOADS</li>
+        </nav>
+      </div><!-- end header -->
+
+    <div class="wrapper">
+
+      <section>
+        <div id="title">
+          <h1>Blamer</h1>
+          <p>Automagically find out what Symbolicate blames for the recent crashes on your jailbroken iDevice</p>
+          <hr>
+          <span class="credits left">Project maintained by <a href="https://github.com/walshie4">walshie4</a></span>
+          <span class="credits right">Hosted on GitHub Pages &mdash; Theme by <a href="https://twitter.com/michigangraham">mattgraham</a></span>
+        </div>
+
+        <h1>
+<a name="blamer" class="anchor" href="#blamer"><span class="octicon octicon-link"></span></a>Blamer</h1>
+
+<p>Automagically find out what Symbolicate blames for the recent crashes on your jailbroken iDevice</p>
+
+<h2>
+<a name="pre-reqs" class="anchor" href="#pre-reqs"><span class="octicon octicon-link"></span></a>Pre-req's</h2>
+
+<ul>
+<li>
+<p>Symbolicate</p>
+
+<ul>
+<li>To install it open Cydia, and go to the Manage tab. Tap the settings button in the top right corner,
+and select user type 'Developer'. After that all you should have to do is search for the Symbolicate package
+and install it. Once installed you can change your user type back to whatever you had it set as before.</li>
+</ul>
+</li>
+<li>
+<p>Python</p>
+
+<ul>
+<li>To install Python on your jailbroken iDevice simply open MobileTerminal or ssh into your iDevice and run
+<code>apt-get install python</code> and answer y to any prompts about installing new packages.</li>
+</ul>
+</li>
+</ul><h2>
+<a name="how-to-use" class="anchor" href="#how-to-use"><span class="octicon octicon-link"></span></a>How to use</h2>
+
+<ul>
+<li>To use this script simply run <code>python blamer.py</code> on your jailbroken iDevice. A blame.txt file will be generated with
+the summary of symbolicate's blame of all found .plist files in your /var/mobile/Library/Logs/CrashReporter dir.</li>
+</ul><h2>
+<a name="note" class="anchor" href="#note"><span class="octicon octicon-link"></span></a>Note</h2>
+
+<ul>
+<li><p>Everytime you sync your iDevice all the crash logs will be deleted</p></li>
+<li><p>The blame provided by Symbolicate is only a guess of which package caused the crash, and is not a definite
+cause.</p></li>
+</ul>
+      </section>
+
+    </div>
+    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
+    
+  </body>
+</html>
