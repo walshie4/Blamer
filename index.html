@@ -72,18 +72,21 @@ the summary of symbolicate's blame of all found .plist files in your <code>/var/
 </ul><p>For a video walkthough go <a href="http://youtu.be/IoeE5im7Lfo">here</a>.</p>
 
 <h3>
-<a name="how-to-use-with-activate-command" class="anchor" href="#how-to-use-with-activate-command"><span class="octicon octicon-link"></span></a>How to use with Activate Command</h3>
+<a name="how-to-use-with-activate-command-and-activate-link" class="anchor" href="#how-to-use-with-activate-command-and-activate-link"><span class="octicon octicon-link"></span></a>How to use with Activate Command and Activate Link</h3>
 
-<p><strong>As of right now I can't get this to work due to permissions. I'll update this when I can</strong></p>
+<p>Thanks to Reddit user <a href="http://www.reddit.com/user/qazaqazaqazaq">qazaqazaqazaq</a> for helping fix the issues for setup with
+Activate Command.</p>
 
 <ul>
 <li><p>First download the latest source, and install Activate Command (and Activate Link if you would
 like to automate opening the blame.txt file) from Cydia.</p></li>
 <li><p>Next place the downloaded script somewhere mobile user has read/write access. For simplicity in finding it I would
-suggest making a directory inside your <code>/var/mobile/</code> dir called Blamer.</p></li>
+suggest making a directory inside your <code>/usr/bin/</code> dir called Blamer.</p></li>
 <li><p>After that open settings and go to the Activate Command panel. For the command enter 
-<code>python [path-to-blamer-source]/blamer.py</code> so if you used <code>/var/mobile/</code> as suggested above your command would be
-<code>python /var/mobile/Blamer/blamer.py</code></p></li>
+<code>python [path-to-blamer-source]/blamer.py</code> so if you used <code>/usr/bin/</code> as suggested above your command would be
+<code>python /usr/bin/Blamer/blamer.py</code></p></li>
+<li><p>If you would like to automate the opening of the <code>blame.txt</code> file install Cydia package <code>Activate Link</code> and use the URL
+<code>ifile:///var/mobile/Library/Logs/CrashReporter/blame.txt</code></p></li>
 </ul><h2>
 <a name="note" class="anchor" href="#note"><span class="octicon octicon-link"></span></a>Note</h2>
 
