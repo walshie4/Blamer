@@ -29,6 +29,7 @@ the summary of symbolicate's blame of all found .plist files in your `/var/mobil
 For a video walkthough go [here](http://youtu.be/IoeE5im7Lfo).
 
 ###How to use with Activate Command
+**As of right now I can't get this to work due to permissions. I'll update this when I can**
 
 * First download the latest source, and install Activate Command (and Activate Link if you would
 like to automate opening the blame.txt file) from Cydia.
