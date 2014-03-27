@@ -6,6 +6,8 @@
 #Symbolicate finds as the blame for recent springboard crashes
 import os
 location = "/var/mobile/Library/Logs/CrashReporter/"
+if os.path.isfile(location + "blame.txt"):
+    os.system("echo "" > " location + "blame.txt") #empty the blame.txt file of old results
 os.system("touch " + location + "blame.txt")
 os.system("touch " + location + "temp.txt")
 path = "/var/mobile/Library/Logs/CrashReporter/"
