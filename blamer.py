@@ -6,6 +6,7 @@
 #Symbolicate finds as the blame for recent springboard crashes
 import os, time
 os.system("touch blame.txt")
+os.system("touch temp.txt")
 path = "/var/mobile/Library/Logs/CrashReporter/"
 crashes = dict() #dictionary to hold all found crashes
 for file in os.listdir(path):
