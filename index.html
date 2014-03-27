@@ -4,44 +4,36 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
     <title>Blamer by walshie4</title>
+
     <link rel="stylesheet" href="stylesheets/styles.css">
     <link rel="stylesheet" href="stylesheets/pygment_trac.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-    <script src="javascripts/respond.js"></script>
-    <!--[if lt IE 9]>
-      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-    <!--[if lt IE 8]>
-    <link rel="stylesheet" href="stylesheets/ie.css">
-    <![endif]-->
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
   </head>
   <body>
-      <div id="header">
-        <nav>
-          <li class="fork"><a href="https://github.com/walshie4/Blamer">View On GitHub</a></li>
-          <li class="downloads"><a href="https://github.com/walshie4/Blamer/zipball/master">ZIP</a></li>
-          <li class="downloads"><a href="https://github.com/walshie4/Blamer/tarball/master">TAR</a></li>
-          <li class="title">DOWNLOADS</li>
-        </nav>
-      </div><!-- end header -->
-
     <div class="wrapper">
+      <header>
+        <h1>Blamer</h1>
+        <p>Automagically find out what Symbolicate blames for the recent crashes on your jailbroken iDevice</p>
 
+        <p class="view"><a href="https://github.com/walshie4/Blamer">View the Project on GitHub <small>walshie4/Blamer</small></a></p>
+
+
+        <ul>
+          <li><a href="https://github.com/walshie4/Blamer/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/walshie4/Blamer/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/walshie4/Blamer">View On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
       <section>
-        <div id="title">
-          <h1>Blamer</h1>
-          <p>Automagically find out what Symbolicate blames for the recent crashes on your jailbroken iDevice</p>
-          <hr>
-          <span class="credits left">Project maintained by <a href="https://github.com/walshie4">walshie4</a></span>
-          <span class="credits right">Hosted on GitHub Pages &mdash; Theme by <a href="https://twitter.com/michigangraham">mattgraham</a></span>
-        </div>
-
         <h1>
 <a name="blamer" class="anchor" href="#blamer"><span class="octicon octicon-link"></span></a>Blamer</h1>
 
 <p>Automagically find out what Symbolicate blames for the recent crashes on your jailbroken iDevice</p>
+
+<p><strong>Download the source <a href="https://github.com/walshie4/Blamer/archive/master.zip">here</a></strong></p>
 
 <h2>
 <a name="pre-reqs" class="anchor" href="#pre-reqs"><span class="octicon octicon-link"></span></a>Pre-req's</h2>
@@ -70,11 +62,29 @@ and install it. Once installed you can change your user type back to whatever yo
 <ul>
 <li><p>First download the source of this project from one of the links on the project page to your iDevice, then extract the source to
 any directory</p></li>
-<li><p>To use this script simply run <code>python blamer.py</code>. A blame.txt file will be generated with
+<li><p>To use this script simply run <code>python blamer.py</code>. <strong>Make sure you are root!</strong> A blame.txt file will be generated with
 the summary of symbolicate's blame of all found .plist files in your <code>/var/mobile/Library/Logs/CrashReporter</code> dir.</p></li>
+</ul><p><strong>OR</strong></p>
+
+<ul>
+<li>You can install through Cydia, just search for <code>python</code>
+</li>
 </ul><p>For a video walkthough go <a href="http://youtu.be/IoeE5im7Lfo">here</a>.</p>
 
-<h2>
+<h3>
+<a name="how-to-use-with-activate-command" class="anchor" href="#how-to-use-with-activate-command"><span class="octicon octicon-link"></span></a>How to use with Activate Command</h3>
+
+<p><strong>As of right now I can't get this to work due to permissions. I'll update this when I can</strong></p>
+
+<ul>
+<li><p>First download the latest source, and install Activate Command (and Activate Link if you would
+like to automate opening the blame.txt file) from Cydia.</p></li>
+<li><p>Next place the downloaded script somewhere mobile user has read/write access. For simplicity in finding it I would
+suggest making a directory inside your <code>/var/mobile/</code> dir called Blamer.</p></li>
+<li><p>After that open settings and go to the Activate Command panel. For the command enter 
+<code>python [path-to-blamer-source]/blamer.py</code> so if you used <code>/var/mobile/</code> as suggested above your command would be
+<code>python /var/mobile/Blamer/blamer.py</code></p></li>
+</ul><h2>
 <a name="note" class="anchor" href="#note"><span class="octicon octicon-link"></span></a>Note</h2>
 
 <ul>
@@ -83,9 +93,12 @@ the summary of symbolicate's blame of all found .plist files in your <code>/var/
 cause.</p></li>
 </ul>
       </section>
-
+      <footer>
+        <p>This project is maintained by <a href="https://github.com/walshie4">walshie4</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
     </div>
-    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
+    <script src="javascripts/scale.fix.js"></script>
     
   </body>
 </html>
