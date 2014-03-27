@@ -5,7 +5,7 @@
 #A simple script to help jailbroken iDevice users find out what
 #Symbolicate finds as the blame for recent springboard crashes
 import os
-location = "/var/mobile/"
+location = "/usr/bin/Library/Logs/CrashReporter/"
 os.system("touch " + location + "blame.txt")
 os.system("touch " + location + "temp.txt")
 path = "/var/mobile/Library/Logs/CrashReporter/"
@@ -13,7 +13,7 @@ crashes = dict() #dictionary to hold all found crashes
 for file in os.listdir(path):
     if file.endswith(".plist"):
         print("now reading: " + file)
-        command = "symbolicate " + path + file + " > temp.txt"
+        command = "symbolicate " + path + file + " > " + location + "temp.txt"
         os.system(command)
         recording = False #true when writing to output file, false otherwise
         output = open(location + "temp.txt")
