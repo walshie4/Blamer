@@ -17,7 +17,7 @@ Automagically find out what Symbolicate blames for the recent crashes on your ja
 * First download the source of this project from one of the links on the project page to your iDevice, then extract the source to
 any directory
 
-* To use this script simply run `python blamer.py`. A blame.txt file will be generated with
+* To use this script simply run `python blamer.py`. **Make sure you are roo!t** A blame.txt file will be generated with
 the summary of symbolicate's blame of all found .plist files in your `/var/mobile/Library/Logs/CrashReporter` dir.
 
 For a video walkthough go [here](http://youtu.be/IoeE5im7Lfo).
