@@ -32,6 +32,9 @@ For a video walkthough go [here](http://youtu.be/IoeE5im7Lfo).
 Thanks to Reddit user [qazaqazaqazaq](http://www.reddit.com/user/qazaqazaqazaq) for helping fix the issues for setup with
 Activate Command.
 
+For a video walkthrough on how to set this up, and a recap on installing directly to your iDevice look 
+[here](http://youtu.be/Vtavb3LbHvY).
+
 * First download the latest source, and install Activate Command (and Activate Link if you would
 like to automate opening the blame.txt file) from Cydia.
 
