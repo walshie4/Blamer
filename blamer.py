@@ -4,7 +4,7 @@
 
 #A simple script to help jailbroken iDevice users find out what
 #Symbolicate finds as the blame for recent springboard crashes
-import os, time
+import os
 os.system("touch blame.txt")
 os.system("touch temp.txt")
 path = "/var/mobile/Library/Logs/CrashReporter/"
