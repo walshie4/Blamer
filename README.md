@@ -22,6 +22,10 @@ any directory
 * To use this script simply run `python blamer.py`. **Make sure you are root!** A blame.txt file will be generated with
 the summary of symbolicate's blame of all found .plist files in your `/var/mobile/Library/Logs/CrashReporter` dir.
 
+**OR**
+
+* You can install through Cydia, just search for `python`
+
 For a video walkthough go [here](http://youtu.be/IoeE5im7Lfo).
 
 ###How to use with Activate Command
