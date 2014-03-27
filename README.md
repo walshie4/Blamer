@@ -28,19 +28,22 @@ the summary of symbolicate's blame of all found .plist files in your `/var/mobil
 
 For a video walkthough go [here](http://youtu.be/IoeE5im7Lfo).
 
-###How to use with Activate Command
-**As of right now I can't get this to work due to permissions. I'll update this when I can**
+###How to use with Activate Command and Activate Link
+Thanks to Reddit user [qazaqazaqazaq](http://www.reddit.com/user/qazaqazaqazaq) for helping fix the issues for setup with
+Activate Command.
 
 * First download the latest source, and install Activate Command (and Activate Link if you would
 like to automate opening the blame.txt file) from Cydia.
 
 * Next place the downloaded script somewhere mobile user has read/write access. For simplicity in finding it I would
-suggest making a directory inside your `/var/mobile/` dir called Blamer.
+suggest making a directory inside your `/usr/bin/` dir called Blamer.
 
 * After that open settings and go to the Activate Command panel. For the command enter 
-`python [path-to-blamer-source]/blamer.py` so if you used `/var/mobile/` as suggested above your command would be
-`python /var/mobile/Blamer/blamer.py`
+`python [path-to-blamer-source]/blamer.py` so if you used `/usr/bin/` as suggested above your command would be
+`python /usr/bin/Blamer/blamer.py`
 
+* If you would like to automate the opening of the `blame.txt` file install Cydia package `Activate Link` and use the URL
+`ifile:///var/mobile/Library/Logs/CrashReporter/blame.txt`
 
 ##Note
 * Everytime you sync your iDevice all the crash logs will be deleted
