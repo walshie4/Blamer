@@ -21,7 +21,8 @@ for file in os.listdir(path):
         output = open(location + "temp.txt")
         for line in output:
             if line.startswith("/"):#is a path
-                word = line.rsplit("/")
+                parts = line.split("/")
+                word = parts[len(parts)-1]#cut out name
                 if word in crashes: #already been found
                     crashes[word] += 1 #increment its count
                 else:
