@@ -5,6 +5,10 @@ Automagically find out what Symbolicate blames for the recent crashes on your ja
 
 **Download the source [here](https://github.com/walshie4/Blamer/archive/master.zip)**
 
+####Status
+
+Tested on iPhone 5 iOS 8.1
+
 ##Pre-req's
 * Symbolicate
     * To install it open Cydia, and go to the Manage tab. Tap the settings button in the top right corner,
@@ -20,7 +24,7 @@ Automagically find out what Symbolicate blames for the recent crashes on your ja
 any directory
 
 * To use this script simply run `python blamer.py`. A blame.txt file will be generated with
-the summary of symbolicate's blame of all found .plist files in your `/var/mobile/Library/Logs/CrashReporter` dir.
+the summary of symbolicate's blame of all found .ipa files in your `/var/mobile/Library/Logs/CrashReporter` dir.
 
 **OR**
 
