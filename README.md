@@ -18,6 +18,11 @@ Tested on iPhone 5 iOS 8.1
 * Python
     * To install Python on your jailbroken iDevice simply open MobileTerminal or ssh into your iDevice and run
     `apt-get install python` and answer y to any prompts about installing new packages.
+    
+    **OR**
+
+    * You can install through Cydia, just search for `python`
+
 
 ##How to use
 * First download the source of this project from one of the links on the project page to your iDevice, then extract the source to
@@ -25,10 +30,6 @@ any directory
 
 * To use this script simply run `python blamer.py`. A blame.txt file will be generated with
 the summary of symbolicate's blame of all found .ipa files in your `/var/mobile/Library/Logs/CrashReporter` dir.
-
-**OR**
-
-* You can install through Cydia, just search for `python`
 
 For a video walkthough go [here](http://youtu.be/IoeE5im7Lfo).
 
