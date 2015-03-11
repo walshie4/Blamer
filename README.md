@@ -1,6 +1,9 @@
 Blamer
 ======
 
+This project is no longer actively maintained. [Crash Reporter]("https://github.com/ashikase/CrashReporter")
+is a good replacement utility.
+
 Automagically find out what Symbolicate blames for the recent crashes on your jailbroken iDevice
 
 **Download the source [here](https://github.com/walshie4/Blamer/archive/master.zip)**
